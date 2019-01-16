@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FontAwesome GitHub Issue #211: https://github.com/FortAwesome/react-fontawesome/issues/211</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <!-- PropTypes -->
+    <script src="https://unpkg.com/prop-types@15.6.2/prop-types.js"></script>
+
+    <!-- React and ReactDom -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- FontAwesome Free Solid SVG Icons -->
+    <script src="https://unpkg.com/@fortawesome/fontawesome-free@5.6.3/js/all.js"></script>
+
+    <!-- FontAwesome SVG Core -->
+    <script src="https://unpkg.com/@fortawesome/fontawesome-svg-core@1.2.12/index.js"></script>
+    <link href="https://unpkg.com/@fortawesome/fontawesome-svg-core@1.2.12/styles.css" rel="stylesheet" />
+
+    <!-- FontAwesome Free Solid SVG Icons -->
+    <script src="https://unpkg.com/@fortawesome/free-solid-svg-icons@5.6.3/index.js"></script>
+
+    <!-- FontAwesome React -->
+    <script src="https://unpkg.com/@fortawesome/react-fontawesome@0.1.4/index.js"></script>
+
+    <!-- Initialize -->
+    <script type="text/javascript">
+        // Global Variable Declaration for React Components
+        var fontawesomeSvgCore;
+        var FontAwesomeSVGIcons;
+        var FontAwesomeIcon;
+
+        // On Document Load
+        $(function () {
+            fontawesomeSvgCore = window['fontawesome-svg-core'];
+            FontAwesomeSVGIcons = window['free-solid-svg-icons'];
+            FontAwesomeIcon = window['react-fontawesome'].FontAwesomeIcon;
+            fontawesomeSvgCore.library.add(
+                FontAwesomeSVGIcons.faPlus,
+                FontAwesomeSVGIcons.faMinus,
+                FontAwesomeSVGIcons.faCheck,
+                FontAwesomeSVGIcons.faTimes,
+                FontAwesomeSVGIcons.faLongArrowAltRight,
+                FontAwesomeSVGIcons.faFileAlt,
+                FontAwesomeSVGIcons.faCircle
+            );
+
+            ReactDOM.render(React.createElement(FontAwesomeIcon, { icon: "file-alt", size: "2x" }), document.getElementById('root'));
+        });
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
